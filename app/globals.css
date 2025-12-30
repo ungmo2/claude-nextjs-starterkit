@@ -124,3 +124,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-100vh) translateX(50px);
+  }
+}
+
+.animate-float {
+  animation: float linear infinite;
+}
