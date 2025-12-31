@@ -1,4 +1,4 @@
-import { User, Post } from "@/lib/types"
+import { User, Post, PaginatedResponse } from "@/lib/types"
 
 // Mock 사용자 데이터
 export const mockUsers: User[] = [
@@ -114,7 +114,10 @@ export function findPostById(id: number): Post | undefined {
 }
 
 // 게시물 페이지네이션
-export function getPosts(page: number = 1, limit: number = 5) {
+export function getPosts(
+  page: number = 1,
+  limit: number = 5
+): PaginatedResponse<Post> {
   const startIndex = (page - 1) * limit
   const endIndex = startIndex + limit
   const paginatedPosts = mockPosts.slice(startIndex, endIndex)

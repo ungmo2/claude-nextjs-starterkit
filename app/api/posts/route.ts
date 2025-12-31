@@ -24,7 +24,7 @@ export async function GET(request: Request) {
 
     const response: ApiResponse<PaginatedResponse<Post>> = {
       success: true,
-      data: result as any,
+      data: result,
       message: "게시물 목록 조회 성공",
     }
 
