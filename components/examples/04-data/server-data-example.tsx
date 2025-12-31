@@ -1,4 +1,5 @@
 import { User } from "@/lib/types"
+import { env } from "@/lib/env"
 
 // Server Component에서 데이터 페칭
 async function ServerDataExample() {
@@ -6,7 +7,7 @@ async function ServerDataExample() {
   let error: string | null = null
 
   try {
-    const response = await fetch("http://localhost:3000/api/users", {
+    const response = await fetch(`${env.API_URL}/api/users`, {
       cache: "no-store", // 캐시 비활성화 (항상 최신 데이터)
     })
 
