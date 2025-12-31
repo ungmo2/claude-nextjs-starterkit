@@ -5,18 +5,19 @@ import {
   Smartphone,
   LucideIcon,
 } from "lucide-react"
+import { env } from "./env"
 
 // 사이트 설정
 export const siteConfig = {
-  name: "Next.js Starter Kit",
-  description: "나만의 Next.js 스타터킷",
-  url: "https://your-site.com",
-  ogImage: "/og-image.png",
+  name: env.SITE_NAME,
+  description: env.SITE_DESCRIPTION,
+  url: env.SITE_URL,
+  ogImage: env.OG_IMAGE,
   links: {
-    github: "https://github.com/yourusername/yourproject",
-    twitter: "https://twitter.com/yourusername",
-    linkedin: "https://linkedin.com/company/yourcompany",
-    email: "mailto:hello@yoursite.com",
+    github: env.GITHUB_URL,
+    twitter: env.TWITTER_URL,
+    linkedin: env.LINKEDIN_URL,
+    email: `mailto:${env.CONTACT_EMAIL}`,
   },
 }
 
